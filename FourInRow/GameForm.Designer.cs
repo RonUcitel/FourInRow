@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pic05 = new System.Windows.Forms.PictureBox();
             this.pic64 = new System.Windows.Forms.PictureBox();
@@ -124,10 +126,12 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(48, 48);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(911, 56);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(2, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(304, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -136,15 +140,22 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.resetToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(125, 52);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 22);
             this.fileToolStripMenuItem.Text = "Game";
             // 
             // resetToolStripMenuItem
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(234, 54);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.resetToolStripMenuItem.Text = "Reset";
             this.resetToolStripMenuItem.Click += new System.EventHandler(this.ResetToolStripMenuItem_Click);
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 22);
+            this.infoToolStripMenuItem.Text = "Info";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -190,357 +201,403 @@
             this.panel1.Controls.Add(this.pic54);
             this.panel1.Controls.Add(this.pic21);
             this.panel1.Controls.Add(this.pic44);
-            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Location = new System.Drawing.Point(0, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(911, 780);
+            this.panel1.Size = new System.Drawing.Size(304, 260);
             this.panel1.TabIndex = 84;
             // 
             // pic05
             // 
             this.pic05.Location = new System.Drawing.Point(0, 0);
+            this.pic05.Margin = new System.Windows.Forms.Padding(1);
             this.pic05.Name = "pic05";
-            this.pic05.Size = new System.Drawing.Size(125, 125);
+            this.pic05.Size = new System.Drawing.Size(42, 42);
             this.pic05.TabIndex = 126;
             this.pic05.TabStop = false;
             // 
             // pic64
             // 
-            this.pic64.Location = new System.Drawing.Point(786, 131);
+            this.pic64.Location = new System.Drawing.Point(262, 44);
+            this.pic64.Margin = new System.Windows.Forms.Padding(1);
             this.pic64.Name = "pic64";
-            this.pic64.Size = new System.Drawing.Size(125, 125);
+            this.pic64.Size = new System.Drawing.Size(42, 42);
             this.pic64.TabIndex = 139;
             this.pic64.TabStop = false;
             // 
             // pic53
             // 
-            this.pic53.Location = new System.Drawing.Point(655, 262);
+            this.pic53.Location = new System.Drawing.Point(218, 87);
+            this.pic53.Margin = new System.Windows.Forms.Padding(1);
             this.pic53.Name = "pic53";
-            this.pic53.Size = new System.Drawing.Size(125, 125);
+            this.pic53.Size = new System.Drawing.Size(42, 42);
             this.pic53.TabIndex = 145;
             this.pic53.TabStop = false;
             // 
             // pic63
             // 
-            this.pic63.Location = new System.Drawing.Point(786, 262);
+            this.pic63.Location = new System.Drawing.Point(262, 87);
+            this.pic63.Margin = new System.Windows.Forms.Padding(1);
             this.pic63.Name = "pic63";
-            this.pic63.Size = new System.Drawing.Size(125, 125);
+            this.pic63.Size = new System.Drawing.Size(42, 42);
             this.pic63.TabIndex = 146;
             this.pic63.TabStop = false;
             // 
             // pic20
             // 
-            this.pic20.Location = new System.Drawing.Point(262, 655);
+            this.pic20.Location = new System.Drawing.Point(87, 218);
+            this.pic20.Margin = new System.Windows.Forms.Padding(1);
             this.pic20.Name = "pic20";
-            this.pic20.Size = new System.Drawing.Size(125, 125);
+            this.pic20.Size = new System.Drawing.Size(42, 42);
             this.pic20.TabIndex = 163;
             this.pic20.TabStop = false;
             // 
             // pic33
             // 
-            this.pic33.Location = new System.Drawing.Point(393, 262);
+            this.pic33.Location = new System.Drawing.Point(131, 87);
+            this.pic33.Margin = new System.Windows.Forms.Padding(1);
             this.pic33.Name = "pic33";
-            this.pic33.Size = new System.Drawing.Size(125, 125);
+            this.pic33.Size = new System.Drawing.Size(42, 42);
             this.pic33.TabIndex = 143;
             this.pic33.TabStop = false;
             // 
             // pic43
             // 
-            this.pic43.Location = new System.Drawing.Point(524, 262);
+            this.pic43.Location = new System.Drawing.Point(175, 87);
+            this.pic43.Margin = new System.Windows.Forms.Padding(1);
             this.pic43.Name = "pic43";
-            this.pic43.Size = new System.Drawing.Size(125, 125);
+            this.pic43.Size = new System.Drawing.Size(42, 42);
             this.pic43.TabIndex = 144;
             this.pic43.TabStop = false;
             // 
             // pic32
             // 
-            this.pic32.Location = new System.Drawing.Point(393, 393);
+            this.pic32.Location = new System.Drawing.Point(131, 131);
+            this.pic32.Margin = new System.Windows.Forms.Padding(1);
             this.pic32.Name = "pic32";
-            this.pic32.Size = new System.Drawing.Size(125, 125);
+            this.pic32.Size = new System.Drawing.Size(42, 42);
             this.pic32.TabIndex = 150;
             this.pic32.TabStop = false;
             // 
             // pic31
             // 
-            this.pic31.Location = new System.Drawing.Point(393, 524);
+            this.pic31.Location = new System.Drawing.Point(131, 175);
+            this.pic31.Margin = new System.Windows.Forms.Padding(1);
             this.pic31.Name = "pic31";
-            this.pic31.Size = new System.Drawing.Size(125, 125);
+            this.pic31.Size = new System.Drawing.Size(42, 42);
             this.pic31.TabIndex = 157;
             this.pic31.TabStop = false;
             // 
             // pic30
             // 
-            this.pic30.Location = new System.Drawing.Point(393, 655);
+            this.pic30.Location = new System.Drawing.Point(131, 218);
+            this.pic30.Margin = new System.Windows.Forms.Padding(1);
             this.pic30.Name = "pic30";
-            this.pic30.Size = new System.Drawing.Size(125, 125);
+            this.pic30.Size = new System.Drawing.Size(42, 42);
             this.pic30.TabIndex = 164;
             this.pic30.TabStop = false;
             // 
             // pic42
             // 
-            this.pic42.Location = new System.Drawing.Point(524, 393);
+            this.pic42.Location = new System.Drawing.Point(175, 131);
+            this.pic42.Margin = new System.Windows.Forms.Padding(1);
             this.pic42.Name = "pic42";
-            this.pic42.Size = new System.Drawing.Size(125, 125);
+            this.pic42.Size = new System.Drawing.Size(42, 42);
             this.pic42.TabIndex = 151;
             this.pic42.TabStop = false;
             // 
             // pic41
             // 
-            this.pic41.Location = new System.Drawing.Point(524, 524);
+            this.pic41.Location = new System.Drawing.Point(175, 175);
+            this.pic41.Margin = new System.Windows.Forms.Padding(1);
             this.pic41.Name = "pic41";
-            this.pic41.Size = new System.Drawing.Size(125, 125);
+            this.pic41.Size = new System.Drawing.Size(42, 42);
             this.pic41.TabIndex = 158;
             this.pic41.TabStop = false;
             // 
             // pic40
             // 
-            this.pic40.Location = new System.Drawing.Point(524, 655);
+            this.pic40.Location = new System.Drawing.Point(175, 218);
+            this.pic40.Margin = new System.Windows.Forms.Padding(1);
             this.pic40.Name = "pic40";
-            this.pic40.Size = new System.Drawing.Size(125, 125);
+            this.pic40.Size = new System.Drawing.Size(42, 42);
             this.pic40.TabIndex = 165;
             this.pic40.TabStop = false;
             // 
             // pic52
             // 
-            this.pic52.Location = new System.Drawing.Point(655, 393);
+            this.pic52.Location = new System.Drawing.Point(218, 131);
+            this.pic52.Margin = new System.Windows.Forms.Padding(1);
             this.pic52.Name = "pic52";
-            this.pic52.Size = new System.Drawing.Size(125, 125);
+            this.pic52.Size = new System.Drawing.Size(42, 42);
             this.pic52.TabIndex = 152;
             this.pic52.TabStop = false;
             // 
             // pic62
             // 
-            this.pic62.Location = new System.Drawing.Point(786, 393);
+            this.pic62.Location = new System.Drawing.Point(262, 131);
+            this.pic62.Margin = new System.Windows.Forms.Padding(1);
             this.pic62.Name = "pic62";
-            this.pic62.Size = new System.Drawing.Size(125, 125);
+            this.pic62.Size = new System.Drawing.Size(42, 42);
             this.pic62.TabIndex = 153;
             this.pic62.TabStop = false;
             // 
             // pic51
             // 
-            this.pic51.Location = new System.Drawing.Point(655, 524);
+            this.pic51.Location = new System.Drawing.Point(218, 175);
+            this.pic51.Margin = new System.Windows.Forms.Padding(1);
             this.pic51.Name = "pic51";
-            this.pic51.Size = new System.Drawing.Size(125, 125);
+            this.pic51.Size = new System.Drawing.Size(42, 42);
             this.pic51.TabIndex = 159;
             this.pic51.TabStop = false;
             // 
             // pic50
             // 
-            this.pic50.Location = new System.Drawing.Point(655, 655);
+            this.pic50.Location = new System.Drawing.Point(218, 218);
+            this.pic50.Margin = new System.Windows.Forms.Padding(1);
             this.pic50.Name = "pic50";
-            this.pic50.Size = new System.Drawing.Size(125, 125);
+            this.pic50.Size = new System.Drawing.Size(42, 42);
             this.pic50.TabIndex = 166;
             this.pic50.TabStop = false;
             // 
             // pic61
             // 
-            this.pic61.Location = new System.Drawing.Point(786, 524);
+            this.pic61.Location = new System.Drawing.Point(262, 175);
+            this.pic61.Margin = new System.Windows.Forms.Padding(1);
             this.pic61.Name = "pic61";
-            this.pic61.Size = new System.Drawing.Size(125, 125);
+            this.pic61.Size = new System.Drawing.Size(42, 42);
             this.pic61.TabIndex = 160;
             this.pic61.TabStop = false;
             // 
             // pic60
             // 
-            this.pic60.Location = new System.Drawing.Point(786, 655);
+            this.pic60.Location = new System.Drawing.Point(262, 218);
+            this.pic60.Margin = new System.Windows.Forms.Padding(1);
             this.pic60.Name = "pic60";
-            this.pic60.Size = new System.Drawing.Size(125, 125);
+            this.pic60.Size = new System.Drawing.Size(42, 42);
             this.pic60.TabIndex = 167;
             this.pic60.TabStop = false;
             // 
             // pic15
             // 
-            this.pic15.Location = new System.Drawing.Point(131, 0);
+            this.pic15.Location = new System.Drawing.Point(44, 0);
+            this.pic15.Margin = new System.Windows.Forms.Padding(1);
             this.pic15.Name = "pic15";
-            this.pic15.Size = new System.Drawing.Size(125, 125);
+            this.pic15.Size = new System.Drawing.Size(42, 42);
             this.pic15.TabIndex = 127;
             this.pic15.TabStop = false;
             // 
             // pic02
             // 
-            this.pic02.Location = new System.Drawing.Point(0, 393);
+            this.pic02.Location = new System.Drawing.Point(0, 131);
+            this.pic02.Margin = new System.Windows.Forms.Padding(1);
             this.pic02.Name = "pic02";
-            this.pic02.Size = new System.Drawing.Size(125, 125);
+            this.pic02.Size = new System.Drawing.Size(42, 42);
             this.pic02.TabIndex = 147;
             this.pic02.TabStop = false;
             // 
             // pic25
             // 
-            this.pic25.Location = new System.Drawing.Point(262, 0);
+            this.pic25.Location = new System.Drawing.Point(87, 0);
+            this.pic25.Margin = new System.Windows.Forms.Padding(1);
             this.pic25.Name = "pic25";
-            this.pic25.Size = new System.Drawing.Size(125, 125);
+            this.pic25.Size = new System.Drawing.Size(42, 42);
             this.pic25.TabIndex = 128;
             this.pic25.TabStop = false;
             // 
             // pic12
             // 
-            this.pic12.Location = new System.Drawing.Point(131, 393);
+            this.pic12.Location = new System.Drawing.Point(44, 131);
+            this.pic12.Margin = new System.Windows.Forms.Padding(1);
             this.pic12.Name = "pic12";
-            this.pic12.Size = new System.Drawing.Size(125, 125);
+            this.pic12.Size = new System.Drawing.Size(42, 42);
             this.pic12.TabIndex = 148;
             this.pic12.TabStop = false;
             // 
             // pic35
             // 
-            this.pic35.Location = new System.Drawing.Point(393, 0);
+            this.pic35.Location = new System.Drawing.Point(131, 0);
+            this.pic35.Margin = new System.Windows.Forms.Padding(1);
             this.pic35.Name = "pic35";
-            this.pic35.Size = new System.Drawing.Size(125, 125);
+            this.pic35.Size = new System.Drawing.Size(42, 42);
             this.pic35.TabIndex = 129;
             this.pic35.TabStop = false;
             // 
             // pic22
             // 
-            this.pic22.Location = new System.Drawing.Point(262, 393);
+            this.pic22.Location = new System.Drawing.Point(87, 131);
+            this.pic22.Margin = new System.Windows.Forms.Padding(1);
             this.pic22.Name = "pic22";
-            this.pic22.Size = new System.Drawing.Size(125, 125);
+            this.pic22.Size = new System.Drawing.Size(42, 42);
             this.pic22.TabIndex = 149;
             this.pic22.TabStop = false;
             // 
             // pic45
             // 
-            this.pic45.Location = new System.Drawing.Point(524, 0);
+            this.pic45.Location = new System.Drawing.Point(175, 0);
+            this.pic45.Margin = new System.Windows.Forms.Padding(1);
             this.pic45.Name = "pic45";
-            this.pic45.Size = new System.Drawing.Size(125, 125);
+            this.pic45.Size = new System.Drawing.Size(42, 42);
             this.pic45.TabIndex = 130;
             this.pic45.TabStop = false;
             // 
             // pic55
             // 
-            this.pic55.Location = new System.Drawing.Point(655, 0);
+            this.pic55.Location = new System.Drawing.Point(218, 0);
+            this.pic55.Margin = new System.Windows.Forms.Padding(1);
             this.pic55.Name = "pic55";
-            this.pic55.Size = new System.Drawing.Size(125, 125);
+            this.pic55.Size = new System.Drawing.Size(42, 42);
             this.pic55.TabIndex = 131;
             this.pic55.TabStop = false;
             // 
             // pic10
             // 
-            this.pic10.Location = new System.Drawing.Point(131, 655);
+            this.pic10.Location = new System.Drawing.Point(44, 218);
+            this.pic10.Margin = new System.Windows.Forms.Padding(1);
             this.pic10.Name = "pic10";
-            this.pic10.Size = new System.Drawing.Size(125, 125);
+            this.pic10.Size = new System.Drawing.Size(42, 42);
             this.pic10.TabIndex = 162;
             this.pic10.TabStop = false;
             // 
             // pic65
             // 
-            this.pic65.Location = new System.Drawing.Point(786, 0);
+            this.pic65.Location = new System.Drawing.Point(262, 0);
+            this.pic65.Margin = new System.Windows.Forms.Padding(1);
             this.pic65.Name = "pic65";
-            this.pic65.Size = new System.Drawing.Size(125, 125);
+            this.pic65.Size = new System.Drawing.Size(42, 42);
             this.pic65.TabIndex = 132;
             this.pic65.TabStop = false;
             // 
             // pic23
             // 
-            this.pic23.Location = new System.Drawing.Point(262, 262);
+            this.pic23.Location = new System.Drawing.Point(87, 87);
+            this.pic23.Margin = new System.Windows.Forms.Padding(1);
             this.pic23.Name = "pic23";
-            this.pic23.Size = new System.Drawing.Size(125, 125);
+            this.pic23.Size = new System.Drawing.Size(42, 42);
             this.pic23.TabIndex = 142;
             this.pic23.TabStop = false;
             // 
             // pic00
             // 
-            this.pic00.Location = new System.Drawing.Point(0, 655);
+            this.pic00.Location = new System.Drawing.Point(0, 218);
+            this.pic00.Margin = new System.Windows.Forms.Padding(1);
             this.pic00.Name = "pic00";
-            this.pic00.Size = new System.Drawing.Size(125, 125);
+            this.pic00.Size = new System.Drawing.Size(42, 42);
             this.pic00.TabIndex = 161;
             this.pic00.TabStop = false;
             // 
             // pic04
             // 
-            this.pic04.Location = new System.Drawing.Point(0, 131);
+            this.pic04.Location = new System.Drawing.Point(0, 44);
+            this.pic04.Margin = new System.Windows.Forms.Padding(1);
             this.pic04.Name = "pic04";
-            this.pic04.Size = new System.Drawing.Size(125, 125);
+            this.pic04.Size = new System.Drawing.Size(42, 42);
             this.pic04.TabIndex = 133;
             this.pic04.TabStop = false;
             // 
             // pic13
             // 
-            this.pic13.Location = new System.Drawing.Point(131, 262);
+            this.pic13.Location = new System.Drawing.Point(44, 87);
+            this.pic13.Margin = new System.Windows.Forms.Padding(1);
             this.pic13.Name = "pic13";
-            this.pic13.Size = new System.Drawing.Size(125, 125);
+            this.pic13.Size = new System.Drawing.Size(42, 42);
             this.pic13.TabIndex = 141;
             this.pic13.TabStop = false;
             // 
             // pic14
             // 
-            this.pic14.Location = new System.Drawing.Point(131, 131);
+            this.pic14.Location = new System.Drawing.Point(44, 44);
+            this.pic14.Margin = new System.Windows.Forms.Padding(1);
             this.pic14.Name = "pic14";
-            this.pic14.Size = new System.Drawing.Size(125, 125);
+            this.pic14.Size = new System.Drawing.Size(42, 42);
             this.pic14.TabIndex = 134;
             this.pic14.TabStop = false;
             // 
             // pic03
             // 
-            this.pic03.Location = new System.Drawing.Point(0, 262);
+            this.pic03.Location = new System.Drawing.Point(0, 87);
+            this.pic03.Margin = new System.Windows.Forms.Padding(1);
             this.pic03.Name = "pic03";
-            this.pic03.Size = new System.Drawing.Size(125, 125);
+            this.pic03.Size = new System.Drawing.Size(42, 42);
             this.pic03.TabIndex = 140;
             this.pic03.TabStop = false;
             // 
             // pic01
             // 
-            this.pic01.Location = new System.Drawing.Point(0, 524);
+            this.pic01.Location = new System.Drawing.Point(0, 175);
+            this.pic01.Margin = new System.Windows.Forms.Padding(1);
             this.pic01.Name = "pic01";
-            this.pic01.Size = new System.Drawing.Size(125, 125);
+            this.pic01.Size = new System.Drawing.Size(42, 42);
             this.pic01.TabIndex = 154;
             this.pic01.TabStop = false;
             // 
             // pic24
             // 
-            this.pic24.Location = new System.Drawing.Point(262, 131);
+            this.pic24.Location = new System.Drawing.Point(87, 44);
+            this.pic24.Margin = new System.Windows.Forms.Padding(1);
             this.pic24.Name = "pic24";
-            this.pic24.Size = new System.Drawing.Size(125, 125);
+            this.pic24.Size = new System.Drawing.Size(42, 42);
             this.pic24.TabIndex = 135;
             this.pic24.TabStop = false;
             // 
             // pic11
             // 
-            this.pic11.Location = new System.Drawing.Point(131, 524);
+            this.pic11.Location = new System.Drawing.Point(44, 175);
+            this.pic11.Margin = new System.Windows.Forms.Padding(1);
             this.pic11.Name = "pic11";
-            this.pic11.Size = new System.Drawing.Size(125, 125);
+            this.pic11.Size = new System.Drawing.Size(42, 42);
             this.pic11.TabIndex = 155;
             this.pic11.TabStop = false;
             // 
             // pic34
             // 
-            this.pic34.Location = new System.Drawing.Point(393, 131);
+            this.pic34.Location = new System.Drawing.Point(131, 44);
+            this.pic34.Margin = new System.Windows.Forms.Padding(1);
             this.pic34.Name = "pic34";
-            this.pic34.Size = new System.Drawing.Size(125, 125);
+            this.pic34.Size = new System.Drawing.Size(42, 42);
             this.pic34.TabIndex = 136;
             this.pic34.TabStop = false;
             // 
             // pic54
             // 
-            this.pic54.Location = new System.Drawing.Point(655, 131);
+            this.pic54.Location = new System.Drawing.Point(218, 44);
+            this.pic54.Margin = new System.Windows.Forms.Padding(1);
             this.pic54.Name = "pic54";
-            this.pic54.Size = new System.Drawing.Size(125, 125);
+            this.pic54.Size = new System.Drawing.Size(42, 42);
             this.pic54.TabIndex = 138;
             this.pic54.TabStop = false;
             // 
             // pic21
             // 
-            this.pic21.Location = new System.Drawing.Point(262, 524);
+            this.pic21.Location = new System.Drawing.Point(87, 175);
+            this.pic21.Margin = new System.Windows.Forms.Padding(1);
             this.pic21.Name = "pic21";
-            this.pic21.Size = new System.Drawing.Size(125, 125);
+            this.pic21.Size = new System.Drawing.Size(42, 42);
             this.pic21.TabIndex = 156;
             this.pic21.TabStop = false;
             // 
             // pic44
             // 
-            this.pic44.Location = new System.Drawing.Point(524, 131);
+            this.pic44.Location = new System.Drawing.Point(175, 44);
+            this.pic44.Margin = new System.Windows.Forms.Padding(1);
             this.pic44.Name = "pic44";
-            this.pic44.Size = new System.Drawing.Size(125, 125);
+            this.pic44.Size = new System.Drawing.Size(42, 42);
             this.pic44.TabIndex = 137;
             this.pic44.TabStop = false;
             // 
-            // Form1
+            // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(288F, 288F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(911, 839);
+            this.ClientSize = new System.Drawing.Size(304, 280);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Name = "GameForm";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameForm_FormClosing);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -639,6 +696,7 @@
         private System.Windows.Forms.PictureBox pic21;
         private System.Windows.Forms.PictureBox pic44;
         private System.Windows.Forms.ToolStripMenuItem resetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
     }
 }
 

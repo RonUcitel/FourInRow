@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.blackText = new System.Windows.Forms.TextBox();
-            this.redText = new System.Windows.Forms.TextBox();
+            this.BlackText = new System.Windows.Forms.TextBox();
+            this.RedText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.startB = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,43 +40,54 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 102);
+            this.label1.Location = new System.Drawing.Point(23, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 37);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Black\'s name:";
             // 
-            // blackText
+            // BlackText
             // 
-            this.blackText.Location = new System.Drawing.Point(296, 99);
-            this.blackText.Name = "blackText";
-            this.blackText.Size = new System.Drawing.Size(356, 44);
-            this.blackText.TabIndex = 1;
-            this.blackText.Text = "Black";
+            this.BlackText.Location = new System.Drawing.Point(93, 35);
+            this.BlackText.Margin = new System.Windows.Forms.Padding(1);
+            this.BlackText.Name = "BlackText";
+            this.BlackText.Size = new System.Drawing.Size(115, 20);
+            this.BlackText.TabIndex = 2;
+            this.BlackText.Click += new System.EventHandler(this.TextBox_Click);
+            this.BlackText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
+            this.BlackText.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyUp);
+            this.BlackText.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
-            // redText
+            // RedText
             // 
-            this.redText.Location = new System.Drawing.Point(1068, 99);
-            this.redText.Name = "redText";
-            this.redText.Size = new System.Drawing.Size(356, 44);
-            this.redText.TabIndex = 3;
-            this.redText.Text = "Red";
+            this.RedText.Location = new System.Drawing.Point(337, 35);
+            this.RedText.Margin = new System.Windows.Forms.Padding(1);
+            this.RedText.Name = "RedText";
+            this.RedText.Size = new System.Drawing.Size(115, 20);
+            this.RedText.TabIndex = 3;
+            this.RedText.Click += new System.EventHandler(this.TextBox_Click);
+            this.RedText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
+            this.RedText.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyUp);
+            this.RedText.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(846, 102);
+            this.label2.Location = new System.Drawing.Point(267, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 37);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Reds\'s name:";
             // 
             // startB
             // 
-            this.startB.Location = new System.Drawing.Point(581, 299);
+            this.startB.Location = new System.Drawing.Point(183, 105);
+            this.startB.Margin = new System.Windows.Forms.Padding(1);
             this.startB.Name = "startB";
-            this.startB.Size = new System.Drawing.Size(391, 177);
-            this.startB.TabIndex = 4;
+            this.startB.Size = new System.Drawing.Size(123, 62);
+            this.startB.TabIndex = 1;
             this.startB.Text = "Start!";
             this.startB.UseVisualStyleBackColor = true;
             this.startB.Click += new System.EventHandler(this.Button1_Click);
@@ -83,25 +95,29 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1086, 619);
+            this.label3.Location = new System.Drawing.Point(343, 217);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(351, 37);
+            this.label3.Size = new System.Drawing.Size(119, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Created by R&&U© 2019";
             // 
             // StartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1612, 699);
+            this.ClientSize = new System.Drawing.Size(509, 246);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.startB);
-            this.Controls.Add(this.redText);
+            this.Controls.Add(this.RedText);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.blackText);
+            this.Controls.Add(this.BlackText);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "StartForm";
             this.Text = "StartForm";
+            this.Click += new System.EventHandler(this.StartForm_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,8 +126,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox blackText;
-        private System.Windows.Forms.TextBox redText;
+        private System.Windows.Forms.TextBox BlackText;
+        private System.Windows.Forms.TextBox RedText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button startB;
         private System.Windows.Forms.Label label3;
