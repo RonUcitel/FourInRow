@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeNamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.gamePanel = new System.Windows.Forms.Panel();
             this.pic05 = new System.Windows.Forms.PictureBox();
             this.pic64 = new System.Windows.Forms.PictureBox();
             this.pic53 = new System.Windows.Forms.PictureBox();
@@ -76,8 +77,10 @@
             this.pic54 = new System.Windows.Forms.PictureBox();
             this.pic21 = new System.Windows.Forms.PictureBox();
             this.pic44 = new System.Windows.Forms.PictureBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusTurnShower = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.gamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic05)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic64)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic53)).BeginInit();
@@ -120,13 +123,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic44)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(48, 48);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
+            this.gameToolStripMenuItem,
             this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -135,20 +139,28 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // gameToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 22);
-            this.fileToolStripMenuItem.Text = "Game";
+            this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetToolStripMenuItem,
+            this.changeNamesToolStripMenuItem});
+            this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 22);
+            this.gameToolStripMenuItem.Text = "Game";
             // 
             // resetToolStripMenuItem
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.resetToolStripMenuItem.Text = "Reset";
             this.resetToolStripMenuItem.Click += new System.EventHandler(this.ResetToolStripMenuItem_Click);
+            // 
+            // changeNamesToolStripMenuItem
+            // 
+            this.changeNamesToolStripMenuItem.Name = "changeNamesToolStripMenuItem";
+            this.changeNamesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.changeNamesToolStripMenuItem.Text = "Change names";
+            this.changeNamesToolStripMenuItem.Click += new System.EventHandler(this.ChangeNamesToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
@@ -157,55 +169,55 @@
             this.infoToolStripMenuItem.Text = "Info";
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
             // 
-            // panel1
+            // gamePanel
             // 
-            this.panel1.Controls.Add(this.pic05);
-            this.panel1.Controls.Add(this.pic64);
-            this.panel1.Controls.Add(this.pic53);
-            this.panel1.Controls.Add(this.pic63);
-            this.panel1.Controls.Add(this.pic20);
-            this.panel1.Controls.Add(this.pic33);
-            this.panel1.Controls.Add(this.pic43);
-            this.panel1.Controls.Add(this.pic32);
-            this.panel1.Controls.Add(this.pic31);
-            this.panel1.Controls.Add(this.pic30);
-            this.panel1.Controls.Add(this.pic42);
-            this.panel1.Controls.Add(this.pic41);
-            this.panel1.Controls.Add(this.pic40);
-            this.panel1.Controls.Add(this.pic52);
-            this.panel1.Controls.Add(this.pic62);
-            this.panel1.Controls.Add(this.pic51);
-            this.panel1.Controls.Add(this.pic50);
-            this.panel1.Controls.Add(this.pic61);
-            this.panel1.Controls.Add(this.pic60);
-            this.panel1.Controls.Add(this.pic15);
-            this.panel1.Controls.Add(this.pic02);
-            this.panel1.Controls.Add(this.pic25);
-            this.panel1.Controls.Add(this.pic12);
-            this.panel1.Controls.Add(this.pic35);
-            this.panel1.Controls.Add(this.pic22);
-            this.panel1.Controls.Add(this.pic45);
-            this.panel1.Controls.Add(this.pic55);
-            this.panel1.Controls.Add(this.pic10);
-            this.panel1.Controls.Add(this.pic65);
-            this.panel1.Controls.Add(this.pic23);
-            this.panel1.Controls.Add(this.pic00);
-            this.panel1.Controls.Add(this.pic04);
-            this.panel1.Controls.Add(this.pic13);
-            this.panel1.Controls.Add(this.pic14);
-            this.panel1.Controls.Add(this.pic03);
-            this.panel1.Controls.Add(this.pic01);
-            this.panel1.Controls.Add(this.pic24);
-            this.panel1.Controls.Add(this.pic11);
-            this.panel1.Controls.Add(this.pic34);
-            this.panel1.Controls.Add(this.pic54);
-            this.panel1.Controls.Add(this.pic21);
-            this.panel1.Controls.Add(this.pic44);
-            this.panel1.Location = new System.Drawing.Point(0, 20);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 260);
-            this.panel1.TabIndex = 84;
+            this.gamePanel.Controls.Add(this.pic05);
+            this.gamePanel.Controls.Add(this.pic64);
+            this.gamePanel.Controls.Add(this.pic53);
+            this.gamePanel.Controls.Add(this.pic63);
+            this.gamePanel.Controls.Add(this.pic20);
+            this.gamePanel.Controls.Add(this.pic33);
+            this.gamePanel.Controls.Add(this.pic43);
+            this.gamePanel.Controls.Add(this.pic32);
+            this.gamePanel.Controls.Add(this.pic31);
+            this.gamePanel.Controls.Add(this.pic30);
+            this.gamePanel.Controls.Add(this.pic42);
+            this.gamePanel.Controls.Add(this.pic41);
+            this.gamePanel.Controls.Add(this.pic40);
+            this.gamePanel.Controls.Add(this.pic52);
+            this.gamePanel.Controls.Add(this.pic62);
+            this.gamePanel.Controls.Add(this.pic51);
+            this.gamePanel.Controls.Add(this.pic50);
+            this.gamePanel.Controls.Add(this.pic61);
+            this.gamePanel.Controls.Add(this.pic60);
+            this.gamePanel.Controls.Add(this.pic15);
+            this.gamePanel.Controls.Add(this.pic02);
+            this.gamePanel.Controls.Add(this.pic25);
+            this.gamePanel.Controls.Add(this.pic12);
+            this.gamePanel.Controls.Add(this.pic35);
+            this.gamePanel.Controls.Add(this.pic22);
+            this.gamePanel.Controls.Add(this.pic45);
+            this.gamePanel.Controls.Add(this.pic55);
+            this.gamePanel.Controls.Add(this.pic10);
+            this.gamePanel.Controls.Add(this.pic65);
+            this.gamePanel.Controls.Add(this.pic23);
+            this.gamePanel.Controls.Add(this.pic00);
+            this.gamePanel.Controls.Add(this.pic04);
+            this.gamePanel.Controls.Add(this.pic13);
+            this.gamePanel.Controls.Add(this.pic14);
+            this.gamePanel.Controls.Add(this.pic03);
+            this.gamePanel.Controls.Add(this.pic01);
+            this.gamePanel.Controls.Add(this.pic24);
+            this.gamePanel.Controls.Add(this.pic11);
+            this.gamePanel.Controls.Add(this.pic34);
+            this.gamePanel.Controls.Add(this.pic54);
+            this.gamePanel.Controls.Add(this.pic21);
+            this.gamePanel.Controls.Add(this.pic44);
+            this.gamePanel.Location = new System.Drawing.Point(0, 20);
+            this.gamePanel.Margin = new System.Windows.Forms.Padding(1);
+            this.gamePanel.Name = "gamePanel";
+            this.gamePanel.Size = new System.Drawing.Size(304, 260);
+            this.gamePanel.TabIndex = 84;
             // 
             // pic05
             // 
@@ -585,23 +597,41 @@
             this.pic44.TabIndex = 137;
             this.pic44.TabStop = false;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusTurnShower});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 281);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(304, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.Stretch = false;
+            this.statusStrip1.TabIndex = 85;
+            // 
+            // toolStripStatusTurnShower
+            // 
+            this.toolStripStatusTurnShower.Name = "toolStripStatusTurnShower";
+            this.toolStripStatusTurnShower.Size = new System.Drawing.Size(68, 17);
+            this.toolStripStatusTurnShower.Text = "Black\'s turn";
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(304, 280);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(304, 303);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.gamePanel);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(1);
+            this.MaximizeBox = false;
             this.Name = "GameForm";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameForm_FormClosing);
-            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.gamePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic05)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic64)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic53)).EndInit();
@@ -644,6 +674,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic54)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic44)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,8 +683,8 @@
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem;
+        private System.Windows.Forms.Panel gamePanel;
         private System.Windows.Forms.PictureBox pic05;
         private System.Windows.Forms.PictureBox pic60;
         private System.Windows.Forms.PictureBox pic15;
@@ -697,6 +729,9 @@
         private System.Windows.Forms.PictureBox pic44;
         private System.Windows.Forms.ToolStripMenuItem resetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changeNamesToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusTurnShower;
     }
 }
 

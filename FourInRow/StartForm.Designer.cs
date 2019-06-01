@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.startB = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.switchB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +54,7 @@
             this.BlackText.Margin = new System.Windows.Forms.Padding(1);
             this.BlackText.Name = "BlackText";
             this.BlackText.Size = new System.Drawing.Size(115, 20);
-            this.BlackText.TabIndex = 2;
+            this.BlackText.TabIndex = 1;
             this.BlackText.Click += new System.EventHandler(this.TextBox_Click);
             this.BlackText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
             this.BlackText.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyUp);
@@ -78,19 +79,19 @@
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Reds\'s name:";
             // 
             // startB
             // 
+            this.startB.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.startB.Location = new System.Drawing.Point(183, 105);
             this.startB.Margin = new System.Windows.Forms.Padding(1);
             this.startB.Name = "startB";
             this.startB.Size = new System.Drawing.Size(123, 62);
-            this.startB.TabIndex = 1;
+            this.startB.TabIndex = 4;
             this.startB.Text = "Start!";
             this.startB.UseVisualStyleBackColor = true;
-            this.startB.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label3
             // 
@@ -102,11 +103,22 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Created by R&&U© 2019";
             // 
+            // switchB
+            // 
+            this.switchB.Location = new System.Drawing.Point(212, 33);
+            this.switchB.Name = "switchB";
+            this.switchB.Size = new System.Drawing.Size(51, 23);
+            this.switchB.TabIndex = 2;
+            this.switchB.Text = "<->";
+            this.switchB.UseVisualStyleBackColor = true;
+            this.switchB.Click += new System.EventHandler(this.SwitchB_Click);
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 246);
+            this.Controls.Add(this.switchB);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.startB);
             this.Controls.Add(this.RedText);
@@ -115,8 +127,9 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
+            this.MaximizeBox = false;
             this.Name = "StartForm";
-            this.Text = "StartForm";
+            this.Text = "Start";
             this.Click += new System.EventHandler(this.StartForm_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,5 +144,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button startB;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button switchB;
     }
 }
